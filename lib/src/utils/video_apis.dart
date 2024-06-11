@@ -90,7 +90,7 @@ class VideoApis {
         headers: httpHeader,
       );
       final jsonData =
-          (jsonDecode(response.body)['files'] as List<dynamic>?) ?? [];
+          (jsonDecode(response.body)['download'] as List<dynamic>?) ?? [];
 
       final List<VideoQalityUrls> list = [];
       for (int i = 0; i < jsonData.length; i++) {
